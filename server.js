@@ -25,8 +25,6 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
-const database = {users: []}
-
 // Routes
 app.get('/', (req, res) => {
     res.send(database.users);
@@ -53,4 +51,3 @@ app.listen(PORT, () => {
     console.log(`App is running on port ${PORT}`);
 })
 
-console.log(PORT);
